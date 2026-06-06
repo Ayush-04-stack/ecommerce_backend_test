@@ -16,6 +16,10 @@ app.use(limiter)
 app.use('/products',productroutes)
 app.use('/auth',authroutes)
 
+app.get("/", (req, res) => {
+    res.send("Backend is running successfully 🚀");
+});
+
 
 app.listen(port,()=>{
   console.log(`the server is running on ${port} `)
